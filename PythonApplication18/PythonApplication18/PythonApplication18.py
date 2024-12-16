@@ -1,4 +1,6 @@
-﻿'''
+﻿from timeit import default_timer as timer
+
+'''
 d = dict()
 d[50] = 1
 d[1000] = 2
@@ -250,6 +252,21 @@ for i in range(1):
 end = timer()
 print(f"Время выполнения: {end - start:.5f} секунд")
 '''
+
+start = timer()
+
+nums = [2, 7, 11, 15, 19, 27, 40, 45, 63, 73, 86, 94, 101, 102, 134, 135, 153, 167, 189, 198, 201, 206, 240, 456, 678, 906, 975, 989]
+target = 1964
+dict = {}
+
+for i in range(len(nums)):
+    search_num = target - nums[i]
+    if search_num in dict:
+        print(dict[search_num], i)
+    dict[nums[i]] = i
+
+end = timer()
+print(f"Время выполнения: {end - start:.5f} секунд")
 
 
 
