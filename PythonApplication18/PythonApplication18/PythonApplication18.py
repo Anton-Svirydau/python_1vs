@@ -1,4 +1,4 @@
-'''
+﻿'''
 d = dict()
 d[50] = 1
 d[1000] = 2
@@ -213,6 +213,7 @@ result = binary_search(list=sequence, start_element=0, key=find_element)
 print(result)
 '''
 
+'''
 def binary_search(list, item):
     low = 0
     high = len(list) - 1
@@ -235,6 +236,21 @@ result_1 = binary_search(my_list, 17)
 result_2 = binary_search(my_list, 12)
 print(result_1)
 print(result_2)
+'''
+
+'''
+from timeit import default_timer as timer
+
+start = timer()
+
+# Код для измерения
+for i in range(1):
+    pass
+
+end = timer()
+print(f"Время выполнения: {end - start:.5f} секунд")
+'''
+
 
 
 
