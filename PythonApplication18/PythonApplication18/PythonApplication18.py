@@ -1,4 +1,5 @@
-﻿from timeit import default_timer as timer
+﻿from telnetlib import SE
+from timeit import default_timer as timer
 
 '''
 d = dict()
@@ -269,6 +270,20 @@ end = timer()
 print(f"Время выполнения: {end - start:.5f} секунд")
 
 
+start = timer()
+
+nums = [1, 3, 5, 7, 9]
+target = 63
+dict = {}
+
+for i in range(len(nums)):
+    search_num = target - nums[i]
+    if search_num in dict:
+        print(dict[search_num], i)
+    dict[nums[i]] = i
+
+end = timer
+print(f"Время выполнения: {end - start:.5f} секунд")
 
 
 
